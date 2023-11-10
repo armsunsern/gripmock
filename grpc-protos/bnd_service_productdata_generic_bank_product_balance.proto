@@ -1,0 +1,27 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "BND.Service.ProductData.Proto";
+
+package bnd.service.productdata.v1.proto;
+
+import "google/protobuf/wrappers.proto";
+import "Protos/bnd_service_productdata_customtypes.proto";
+
+service GenericBankProductBalanceService {
+  rpc GetProductBalances (GetProductBalancesRequest) returns (GetProductBalancesResponse);
+}
+
+message GetProductBalancesRequest {
+  repeated string ibans = 1;
+}
+
+message GetProductBalancesResponse {
+  repeated ProductBalance productBalances = 1;
+}
+
+message ProductBalance {
+  int32 productId = 1;
+  google.protobuf.StringValue matrixIban = 2;
+  DecimalValue balance = 3;
+  google.protobuf.StringValue productType = 4;
+}

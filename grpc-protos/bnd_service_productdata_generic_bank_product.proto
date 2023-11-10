@@ -1,0 +1,53 @@
+﻿syntax = "proto3";
+
+package bnd.service.productdata.v1.proto;
+
+option go_package = "google.golang.org/protobuf/types/known/wrapperspb";
+
+import "google/protobuf/wrappers.proto";
+import "bnd_service_productdata_enums.proto";
+
+// The generic bank product service definition.
+service GenericBankProductService {
+  // Gets generic bank product by Matrix IBAN
+  rpc GetProductByMatrixIban (GetProductByMatrixIbanRequest) returns (GetProductByMatrixIbanResponse);
+
+  rpc ListProductMetadataByClientId (ListProductMetadataByClientIdRequest) returns (ListProductMetadataByClientIdResponse);
+}
+
+message ListProductMetadataByClientIdRequest {
+  int32 clientId = 1;
+}
+
+message ListProductMetadataByClientIdResponse {
+  repeated ProductMetadata productMetadatas = 1;
+}
+
+message ProductMetadata {
+  int32 productId = 1;
+  google.protobuf.StringValue iban = 2;
+  google.protobuf.StringValue productType = 3;
+  google.protobuf.StringValue productFlowStatus = 4;
+  optional google.protobuf.Int32Value referrer = 5;
+  google.protobuf.StringValue cashAllocationIban = 6;
+}
+
+// The request message containing Matrix IBAN
+message GetProductByMatrixIbanRequest {
+  string matrixIban = 1;
+}
+
+// The response message containing the generic bank product data
+message GetProductByMatrixIbanResponse {
+  int32 productId = 1;
+  google.protobuf.StringValue productFlowStatus = 2;
+  google.protobuf.StringValue productType = 3;
+  EnumClientType clientType = 4;
+  optional google.protobuf.Int32Value Referrer = 5;
+  repeated ProductClient productClients = 6;
+}
+
+message ProductClient {
+  int32 clientId = 1;
+  EnumClientUserType clientUserType = 2;
+}

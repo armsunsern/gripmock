@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option csharp_namespace = "BND.Service.ProductData.Proto.PortfolioDataService";
+
+package bnd.service.productdata.v1.proto;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "Protos/bnd_service_productdata_enums.proto";
+import "Protos/bnd_service_productdata_customtypes.proto";
+
+service PortfolioDataService {
+  rpc GetPortfolio (GetPortfolioRequest) returns (PortfolioResponse);
+}
+
+message GetPortfolioRequest {
+  ProductIdentifier identifier = 1;
+}
+
+message PortfolioResponse {
+  optional Portfolio Portfolio = 1;
+}
+
+message Portfolio {
+  optional DecimalValue totalValue = 1;
+  repeated FundPosition fundPositions = 2;
+}
+
+message FundPosition {
+  int32 fundId = 1;
+  google.protobuf.StringValue name = 2;
+  EnumFundType fundType = 3;
+  DecimalValue volume = 4;
+  DecimalValue nav = 5;
+  google.protobuf.Timestamp navDate = 6;
+  DecimalValue value = 7;
+}

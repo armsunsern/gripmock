@@ -1,0 +1,60 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "BND.Service.ProductData.Proto";
+
+package bnd.service.productdata.v1.proto;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+import "Protos/bnd_service_productdata_enums.proto";
+import "Protos/bnd_service_productdata_generic_bank_product.proto";
+
+// The Investment service definition.
+service InvestmentDataService {
+  // Gets investment product by ProductId or Iban (if provide both it will use Iban)
+  rpc GetInvestmentProduct (GetInvestmentProductRequest) returns (InvestmentProductResponse);
+
+  // Get investment products 
+  rpc GetInvestmentProducts (GetInvestmentProductsRequest) returns (GetInvestmentProductsResponse);
+}
+
+message GetInvestmentProductsRequest {
+  int32 clientId = 1;
+}
+
+message GetInvestmentProductRequest {
+  oneof parameter {
+    int32 productId = 1;
+    string matrixIban = 2;
+  }
+}
+
+message GetInvestmentProductsResponse{
+  repeated InvestmentProductResponse InvestmentProducts = 1;
+}
+
+message InvestmentProductResponse{
+  int32 productId = 1;
+  google.protobuf.StringValue matrixIban = 2;
+  google.protobuf.StringValue productFlowStatus = 3;
+  google.protobuf.StringValue productType = 4;
+  google.protobuf.StringValue label = 5;
+  int32 fundModelTypeId = 6;
+  double paymentRecurringAmount = 7;
+  EnumPaymentMethod paymentRecurringMethod = 8;
+  EnumPaymentRecurringInterval paymentRecurringInterval = 9;
+  int32 paymentYearMonth = 10;
+  google.protobuf.Timestamp investmentStartDate = 11;
+  google.protobuf.Timestamp investmentEndDate = 12;
+  google.protobuf.Timestamp paymentRecurringEndDate = 13;
+  bool autoRiskReduction = 14;
+  bool autoRebalance = 15;
+  google.protobuf.Int32Value referrer = 16;
+  EnumChannelType serviceChannelType = 17;
+  bool isPledged = 18;
+  EnumClientType clientType = 19;
+  repeated ProductClient productClients = 20;
+  google.protobuf.StringValue flatFeePaidBy = 21;
+  google.protobuf.StringValue cashAllocationIban = 22;
+  google.protobuf.StringValue nominatedIban = 23;
+}

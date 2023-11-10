@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+option csharp_namespace = "BND.Service.ProductData.Proto";
+
+package bnd.service.productdata.v1.proto;
+
+enum EnumClientUserType {
+  Enum_Client_User_Type_Undefined = 0;
+  Enum_Client_User_Type_Primary = 1;
+  Enum_Client_User_Type_Secondary = 2;
+  Enum_Client_User_Type_Tertiary = 3;
+  Enum_Client_User_Type_Insurer = 6;
+  Enum_Client_User_Type_Contractor = 7;
+  Enum_Client_User_Type_Child = 8;
+  Enum_Client_User_Type_Authorised = 9;
+}
+
+enum EnumChannelType {
+  Enum_Channel_Type_Unknown = 0;
+  Enum_Channel_Type_Direct = 1;
+  Enum_Channel_Type_Agent = 2;
+}
+
+enum EnumPaymentMethod {
+  Enum_Payment_Method_Unknown = 0;
+  Enum_Payment_Method_None = 1;
+  Enum_Payment_Method_Deposit = 2;
+  Enum_Payment_Method_DirectDebit = 3;
+  Enum_Payment_Method_DepositExtern = 4;
+}
+
+enum EnumPaymentRecurringInterval{
+  Enum_Payment_Recurring_Interval_Unknown = 0;
+  Enum_Payment_Recurring_Interval_None = 1;
+  Enum_Payment_Recurring_Interval_Monthly = 2;
+  Enum_Payment_Recurring_Interval_Yearly = 3;
+}
+
+enum EnumClientType {
+  Enum_Client_Type_Undefined = 0;
+  Enum_Client_Type_System = 1;
+  Enum_Client_Type_Single = 2;
+  Enum_Client_Type_Double = 3;
+  Enum_Client_Type_Company = 4;
+  Enum_Client_Type_Unknown = 5;
+  Enum_Client_Type_ParentChild = 6;
+}
+
+enum EnumFundType {
+  Enum_Fund_Type_Unknown = 0;
+  Enum_Fund_Type_Cash = 1;
+  Enum_Fund_Type_Stock = 2;
+  Enum_Fund_Type_Bond = 3;
+  Enum_Fund_Type_BondILB = 4;
+  Enum_Fund_Type_Savings= 5;
+}
+
+enum EnumFrequency {
+  Enum_Frequency_Unknown = 0;
+  Enum_Frequency_Monthly = 1;
+  Enum_Frequency_Quarterly = 2;
+  Enum_Frequency_HalfYearly = 3;
+  Enum_Frequency_Yearly = 4;
+}

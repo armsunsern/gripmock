@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+option csharp_namespace = "BND.Service.ProductData.Proto";
+
+package bnd.service.productdata.v1.proto;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+import "Protos/bnd_service_productdata_enums.proto";
+import "Protos/bnd_service_productdata_customtypes.proto";
+
+// The annuity service definition.
+service AnnuityService {
+  // Gets annuity product by client id
+  rpc GetAnnuityProducts (GetAnnuityProductsRequest) returns (GetAnnuityProductsResponse);
+}
+
+// The get annuity products request message
+message GetAnnuityProductsRequest {
+  int32 clientId = 1;
+}
+
+// The get annuity products response message
+message GetAnnuityProductsResponse {
+  repeated AnnuityProduct annuityProducts = 1;
+}
+
+// The annuity product message
+message AnnuityProduct {
+  int32 productId = 1;
+  string matrixIban = 2;
+  EnumClientType clientType = 3;
+  google.protobuf.StringValue productFlowStatus = 4;
+  google.protobuf.StringValue productType = 5;
+  EnumChannelType serviceChannelType = 6;
+  google.protobuf.Int32Value referrer = 7;
+  google.protobuf.StringValue label = 8;
+  google.protobuf.Timestamp nextPaymentDate = 9;
+  google.protobuf.Timestamp lastPaymentDate = 10;
+  DecimalValue payoutPeriodicalAmount = 11;
+  EnumFrequency payoutFrequency = 12;
+  google.protobuf.StringValue nominatedIban = 13;
+}

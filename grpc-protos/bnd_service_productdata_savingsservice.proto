@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+option csharp_namespace = "BND.Service.ProductData.Proto";
+
+package bnd.service.productdata.v1.proto;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+import "Protos/bnd_service_productdata_enums.proto";
+import "Protos/bnd_service_productdata_generic_bank_product.proto";
+
+// The saving service definition.
+service SavingsDataService {
+  // Gets saving product by ProductId or Iban (if provide both it will use Iban)
+  rpc GetSavingsProduct (GetSavingsProductRequest) returns (SavingsProductResponse);
+
+  // Get savings products by clientId
+  rpc GetSavingsProducts (GetSavingsProductsRequest) returns (GetSavingsProductsResponse);
+}
+
+// The get saving products request message
+message GetSavingsProductRequest {
+  oneof parameter {
+    int32 productId = 1;
+    string matrixIban = 2;
+  }
+}
+
+// The get savings products request message
+message GetSavingsProductsRequest {
+  int32 clientId = 1;
+}
+
+// The get savings product response message
+message SavingsProductResponse {
+  int32 productId = 1;
+  EnumClientType clientType = 2;
+  google.protobuf.StringValue productFlowStatus = 3;
+  google.protobuf.StringValue productType = 4;
+  bool isPledged = 5;
+  int32 referrer = 6;
+  google.protobuf.StringValue matrixIban = 7;
+  google.protobuf.StringValue label = 8;
+  google.protobuf.Timestamp investmentStartDate = 9;
+  google.protobuf.Timestamp investmentEndDate = 10;
+  double paymentRecurringAmount = 11;
+  EnumPaymentRecurringInterval paymentRecurringInterval = 12;
+  int32 paymentYearMonth = 13;
+  google.protobuf.Timestamp paymentRecurringEndDate = 14;
+  EnumPaymentMethod paymentRecurringMethod = 15;
+  EnumChannelType serviceChannelType = 16;
+  repeated ProductClient productClients = 17;
+}
+
+// The get savings products response message
+message GetSavingsProductsResponse {
+  repeated SavingsProductResponse savingsProducts = 1;
+}
