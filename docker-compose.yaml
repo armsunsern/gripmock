@@ -10,12 +10,20 @@ services:
       - 4770:4770
       - 4771:4771
     volumes:
-      - F:\Github_Project\gripmock\grpc-protos:/proto
+      - C:\Users\khunwangSH\Downloads\gripmock-master\gripmock-master\grpc-protos:/proto
     command:
       [
-        "--stub=/proto/grpcStubs",
+        "--stub=/proto/stubs",
+        "/proto/bnd_service_productdata_enums.proto",
+        "/proto/bnd_service_productdata_annuityservice.proto",
+        "/proto/bnd_service_productdata_assetallocationservice.proto",
+        "/proto/bnd_service_productdata_customtypes.proto",
         "/proto/bnd_service_productdata_enums.proto",
         "/proto/bnd_service_productdata_generic_bank_product.proto",
+        "/proto/bnd_service_productdata_generic_bank_product_balance.proto",
+        "/proto/bnd_service_productdata_investmentservice.proto",
+        "/proto/bnd_service_productdata_portfolioservice.proto",
+        "/proto/bnd_service_productdata_savingsservice.proto",
       ]
 
 volumes:

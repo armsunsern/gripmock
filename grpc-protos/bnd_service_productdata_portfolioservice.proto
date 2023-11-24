@@ -6,8 +6,8 @@ package bnd.service.productdata.v1.proto;
 
 import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
-import "Protos/bnd_service_productdata_enums.proto";
-import "Protos/bnd_service_productdata_customtypes.proto";
+import "bnd_service_productdata_enums.proto";
+import "bnd_service_productdata_customtypes.proto";
 
 service PortfolioDataService {
   rpc GetPortfolio (GetPortfolioRequest) returns (PortfolioResponse);

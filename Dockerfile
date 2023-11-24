@@ -1,4 +1,4 @@
-FROM golang:1.21-alpine3.17 AS build
+FROM golang:1.21-alpine3.17
 
 # install tools (bash, git, protobuf, protoc-gen-go, protoc-grn-go-grpc, pkger)
 RUN apk -U --no-cache add bash git protobuf &&\
