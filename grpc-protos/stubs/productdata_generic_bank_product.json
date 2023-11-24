@@ -1,0 +1,19 @@
+{
+  "service": "GenericBankProductService",
+  "method": "GetProductByMatrixIban",
+  "input":  { "matches": { "matrixIban": ".*" } },
+  "output": {
+    "data": {
+      "productId": 58458947,
+      "productFlowStatus": "AccountActive",
+      "productType": "InvestmentFreeCompany",
+      "clientType": "Enum_Client_Type_Company",
+      "productClients": [
+        {
+          "clientId": 1461652,
+          "clientUserType": "Enum_Client_User_Type_Primary"
+        }
+      ]
+    }
+  }
+}
