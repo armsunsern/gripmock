@@ -1,0 +1,61 @@
+{
+  "service": "GenericBankProductService",
+  "method": "ListProductMetadataByClientId",
+  "input": { "matches": { "clientId": ".*"} },
+  "output": {
+    "data":{
+		"productMetadatas": [
+		  {
+			"productId": 58189321,
+			"iban": "NL34BNDA0200015496",
+			"productType": "InvestmentRetirement",
+			"productFlowStatus": "AccountActive",
+			"referrer": 57043,
+			"cashAllocationIban": "CashAllocNL34BNDA0200015496"
+		  },
+		  {
+			"productId": 58436813,
+			"iban": "NL25BNDA0200045243",
+			"productType": "InvestmentRetirement",
+			"productFlowStatus": "AccountActive",
+			"cashAllocationIban": "CashAllocNL25BNDA0200045243"
+		  },
+		  {
+			"productId": 58436827,
+			"iban": "NL95BNDA0200045244",
+			"productType": "InvestmentRetirement",
+			"productFlowStatus": "AccountActive",
+			"cashAllocationIban": "CashAllocNL95BNDA0200045244"
+		  },
+		  {
+			"productId": 58441447,
+			"iban": "NL42BNDA0200045616",
+			"productType": "InvestmentMortgage",
+			"productFlowStatus": "AccountActive",
+			"cashAllocationIban": "CashAllocNL42BNDA0200045616"
+		  },
+		  {
+			"productId": 58452605,
+			"iban": "NL48BNDA0200046769",
+			"productType": "InvestmentRetirement",
+			"productFlowStatus": "AccountActive",
+			"cashAllocationIban": "CashAllocNL48BNDA0200046769"
+		  },
+		  {
+			"productId": 58452619,
+			"iban": "NL70BNDA0200046567",
+			"productType": "InvestmentRetirement",
+			"productFlowStatus": "AccountActive",
+			"cashAllocationIban": "CashAllocNL70BNDA0200046567"
+		  },
+		  {
+			"productId": 58452752,
+			"iban": "NL53BNDA0200046582",
+			"productType": "InvestmentFree",
+			"productFlowStatus": "AccountInactive",
+			"cashAllocationIban": "CashAllocNL53BNDA0200046582"
+		  }
+		]
+	  }
+  }
+}

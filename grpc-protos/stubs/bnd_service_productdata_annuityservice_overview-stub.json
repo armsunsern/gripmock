@@ -1,0 +1,46 @@
+{
+  "service": "AnnuityService",
+  "method": "GetAnnuityProducts",
+  "input": { "matches": { "clientId": ".*"} },
+  "output": {
+    "data":{
+		"annuityProducts": [
+		  {
+			"productId": 58443015,
+			"matrixIban": "NL18BNDA0200045757",
+			"clientType": "Enum_Client_Type_Single",
+			"productFlowStatus": "AccountActive",
+			"productType": "SavingsAnnuity",
+			"serviceChannelType": "Enum_Channel_Type_Agent",
+			"referrer": 57043,
+			"nextPaymentDate": "2023-12-01T00:00:00Z",
+			"lastPaymentDate": "2037-11-01T00:00:00Z",
+			"payoutPeriodicalAmount": {
+			  "units": "44",
+			  "nanos": 170000000
+			},
+			"payoutFrequency": "Enum_Frequency_Monthly",
+			"nominatedIban": "NL53INGB0654422370",
+			"incomingChannelType": "Enum_Channel_Type_Agent"
+		  },
+		  {
+			"productId": 58443204,
+			"matrixIban": "NL12BNDA0200045768",
+			"clientType": "Enum_Client_Type_Single",
+			"productFlowStatus": "AccountInactive",
+			"productType": "SavingsAnnuity",
+			"serviceChannelType": "Enum_Channel_Type_Agent",
+			"referrer": 57043,
+			"lastPaymentDate": "2038-12-01T00:00:00Z",
+			"payoutPeriodicalAmount": {
+			  "units": "133",
+			  "nanos": 670000000
+			},
+			"payoutFrequency": "Enum_Frequency_Quarterly",
+			"nominatedIban": "NL53INGB0654422370",
+			"incomingChannelType": "Enum_Channel_Type_Unknown"
+		  }
+		]
+	  }
+  }
+}

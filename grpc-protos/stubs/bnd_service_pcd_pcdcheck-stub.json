@@ -1,0 +1,42 @@
+{
+  "service": "PcdCheckService",
+  "method": "GetPcdCheck",
+  "input": { "matches": {
+				"clientId": ".*",
+				"products": [
+					{
+						"id": ".*",
+						"productType": ".*",
+						"nominatedIban":".*",
+						"iban": ".*",
+						"paymentRecurringMethod": ".*",
+						"productFlowStatus": ".*",
+						"hasReferrer": ".*"
+					}
+				]
+	} },
+  "output": {
+    "data":{
+      "fundPositions":[
+		{
+		  "productId": 58442708,
+		  "foreignIbansCheck": true,
+		  "directDebitAuthorizationCheck": true,
+		  "termsAndConditionsCheck": true,
+		  "accountActivationCheck": true,
+		  "surveyCheck": true,
+		  "nominatedIbansCheck": true
+		},
+		{
+		  "productId": 58442707,
+		  "foreignIbansCheck": true,
+		  "directDebitAuthorizationCheck": true,
+		  "termsAndConditionsCheck": true,
+		  "accountActivationCheck": true,
+		  "surveyCheck": true,
+		  "nominatedIbansCheck": true
+		}
+	  ]
+	}
+  }
+}

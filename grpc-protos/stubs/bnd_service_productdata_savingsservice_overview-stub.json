@@ -1,0 +1,59 @@
+{
+  "service": "SavingsDataService",
+  "method": "GetSavingsProducts",
+  "input": { "matches": { "clientId": ".*"} },
+  "output": {
+    "data":{
+			"savingsProducts": [
+			  {
+				"productId": 58112930,
+				"clientType": "Enum_Client_Type_Single",
+				"productFlowStatus": "AccountActive",
+				"productType": "SavingsRetirement",
+				"isPledged": false,
+				"referrer": 57043,
+				"matrixIban": "NL31BNDA0200010021",
+				"investmentStartDate": "2021-10-01T00:00:00Z",
+				"investmentEndDate": "2030-09-02T00:00:00Z",
+				"paymentRecurringAmount": 100,
+				"paymentRecurringInterval": "Enum_Payment_Recurring_Interval_Monthly",
+				"paymentYearMonth": 0,
+				"paymentRecurringEndDate": "2030-09-02T00:00:00Z",
+				"paymentRecurringMethod": "Enum_Payment_Method_Deposit",
+				"serviceChannelType": "Enum_Channel_Type_Agent",
+				"productClients": [
+				  {
+					"clientId": 1363513,
+					"clientUserType": "Enum_Client_User_Type_Primary"
+				  }
+				],
+				"incomingChannelType": "Enum_Channel_Type_Agent"
+			  },
+			  {
+				"productId": 58112937,
+				"clientType": "Enum_Client_Type_Single",
+				"productFlowStatus": "AccountInactive",
+				"productType": "SavingsRetirement",
+				"isPledged": false,
+				"referrer": 57043,
+				"matrixIban": "NL04BNDA0200010022",
+				"investmentStartDate": "2021-10-01T00:00:00Z",
+				"investmentEndDate": "2024-09-02T00:00:00Z",
+				"paymentRecurringAmount": 100,
+				"paymentRecurringInterval": "Enum_Payment_Recurring_Interval_Monthly",
+				"paymentYearMonth": 0,
+				"paymentRecurringEndDate": "2024-09-02T00:00:00Z",
+				"paymentRecurringMethod": "Enum_Payment_Method_Deposit",
+				"serviceChannelType": "Enum_Channel_Type_Agent",
+				"productClients": [
+				  {
+					"clientId": 1363513,
+					"clientUserType": "Enum_Client_User_Type_Primary"
+				  }
+				],
+				"incomingChannelType": "Enum_Channel_Type_Agent"
+			  }
+		]
+	}
+  }
+}

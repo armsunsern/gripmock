@@ -1,0 +1,29 @@
+{
+  "service": "GenericBankProductBalanceService",
+  "method": "GetProductBalances",
+  "input": { "matches": { "iban": ".*"} },
+  "output": {
+    "data":{
+		"productBalances": [
+		  {
+			"productId": -1,
+			"matrixIban": "CashAllocNL54BNDA0200047049",
+			"balance": {
+			  "units": "189",
+			  "nanos": 750000000
+			},
+			"productType": "Unknown"
+		  },
+		  {
+			"productId": -1,
+			"matrixIban": "NL54BNDA0200047049",
+			"balance": {
+			  "units": "60",
+			  "nanos": 0
+			},
+			"productType": "Unknown"
+		  }
+		]
+	  }
+  }
+}

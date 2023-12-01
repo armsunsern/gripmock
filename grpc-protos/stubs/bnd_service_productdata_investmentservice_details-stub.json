@@ -1,0 +1,29 @@
+{
+  "service": "InvestmentDataService",
+  "method": "GetInvestmentProduct",
+  "input": { "matches": {"matrixIban": ".*" } },
+  "output": {
+		"data":{
+			  "productId": 58460977,
+			  "matrixIban": "NL37BNDA0200047452",
+			  "productFlowStatus": "AccountActive",
+			  "productType": "InvestmentRetirement",
+			  "fundModelTypeId": 12,
+			  "paymentRecurringAmount": 1500,
+			  "paymentRecurringMethod": "Enum_Payment_Method_Deposit",
+			  "paymentRecurringInterval": "Enum_Payment_Recurring_Interval_Monthly",
+			  "paymentYearMonth": 2,
+			  "investmentStartDate": "2023-09-22T00:00:00Z",
+			  "investmentEndDate": "2031-09-22T00:00:00Z",
+			  "paymentRecurringEndDate": "2031-09-22T00:00:00Z",
+			  "autoRiskReduction": true,
+			  "autoRebalance": true,
+			  "referrer": 57043,
+			  "serviceChannelType": "Enum_Channel_Type_Agent",
+			  "isPledged": false,
+			  "clientType": "Enum_Client_Type_Single",
+			  "cashAllocationIban": "CashAllocNL37BNDA0200047452",
+			  "nominatedIban": "NL96SNSB0115541241"
+			}
+		}
+}

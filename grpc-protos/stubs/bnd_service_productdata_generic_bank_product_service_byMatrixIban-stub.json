@@ -1,0 +1,20 @@
+{
+  "service": "GenericBankProductService",
+  "method": "GetProductByMatrixIban",
+  "input": { "matches": { "matrixIban": ".*"} },
+  "output": {
+    "data":{
+		"productId": 58457974,
+		"productFlowStatus": "AccountCreatedAgent",
+		"productType": "InvestmentRetirement",
+		"clientType": "Enum_Client_Type_Single",
+		"Referrer": 57043,
+		"productClients": [
+		  {
+			"clientId": 1461499,
+			"clientUserType": "Enum_Client_User_Type_Primary"
+		  }
+		]
+	  }
+  }
+}

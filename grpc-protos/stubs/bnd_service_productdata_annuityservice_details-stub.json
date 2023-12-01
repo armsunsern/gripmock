@@ -1,0 +1,21 @@
+{
+  "service": "AnnuityService",
+  "method": "GetAnnuityProduct",
+  "input": { "matches": {"matrixIban": ".*" } },
+  "output": {
+		"data":{
+			"annuityProduct": {
+			  "productId": 58443204,
+			  "matrixIban": "NL12BNDA0200045768",
+			  "clientType": "Enum_Client_Type_Single",
+			  "productFlowStatus": "AccountInactive",
+			  "productType": "SavingsAnnuity",
+			  "serviceChannelType": "Enum_Channel_Type_Agent",
+			  "referrer": 57043,
+			  "payoutFrequency": "Enum_Frequency_Unknown",
+			  "nominatedIban": "NL53INGB0654422370",
+			  "incomingChannelType": "Enum_Channel_Type_Agent"
+			}
+		  }
+		}
+}

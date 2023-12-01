@@ -1,0 +1,28 @@
+{
+  "service": "SavingsDataService",
+  "method": "GetSavingsProduct",
+  "input": { "matches": {"matrixIban": ".*" } },
+  "output": {
+		"data":{
+			"productId": 55324662,
+			"clientType": "Enum_Client_Type_Single",
+			"productFlowStatus": "AccountInactive",
+			"productType": "SavingsFree",
+			"isPledged": false,
+			"referrer": 0,
+			"matrixIban": "NL07BNDA0803959613",
+			"paymentRecurringAmount": 0,
+			"paymentRecurringInterval": "Enum_Payment_Recurring_Interval_Unknown",
+			"paymentYearMonth": 0,
+			"paymentRecurringMethod": "Enum_Payment_Method_Unknown",
+			"serviceChannelType": "Enum_Channel_Type_Direct",
+			"productClients": [
+			  {
+				"clientId": 55960,
+				"clientUserType": "Enum_Client_User_Type_Primary"
+			  }
+			],
+			"incomingChannelType": "Enum_Channel_Type_Unknown"
+		  }
+		}
+}

@@ -1,0 +1,30 @@
+{
+  "service": "PortfolioDataService",
+  "method": "GetPortfolio",
+  "input": { "matches": { "MatrixIban": ".*" } },
+  "output": {
+    "data":{
+      "totalValue": 80304.61245,
+      "fundPositions":[
+	  {
+		"fundId": 1005,
+        "name": "BND Duurzaam Wereld Indexfonds",
+        "fundType": "Enum_Fund_Type_Stock",
+		"volume" : 2386.789042,
+		"nav" : 1235.247,
+		"navDate" : "2023-06-06T00:00:00Z",
+		"value" : 6997.235
+	  },
+	  {
+		"fundId": 8003,
+        "name": "BND Euro Staatsobligatie Indexfonds Inflatie",
+        "fundType": "Enum_Fund_Type_Bond",
+		"volume" : 2355.789042,
+		"nav" : 8932.247,
+		"navDate" : "2023-06-06T00:00:00Z",
+		"value" : 6852.235
+	  }
+	  ]
+	}
+  }
+}
